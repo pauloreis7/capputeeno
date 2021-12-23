@@ -19,15 +19,18 @@ export function Header() {
 
         <ActionSection>
           <Search>
-            <input />
+            <input 
+              placeholder='Looking for something specific?'
+            />
 
-            <FiSearch />
+            <FiSearch size={'1.5rem'} />
           </Search>
 
           <CartIcon>
-            <FiShoppingBag />
+            <FiShoppingBag size={'1.5rem'}  />
 
-            <span>0</span>
+
+            <span>2</span>
           </CartIcon>
         </ActionSection>
       </Content>

@@ -4,8 +4,11 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --white: #FFFFFF;
 
+    --gray-100: #F3F5F6;
     --gray-200: #DCE2E6;
     --gray-500: #617480;
+    --gray-600: #737380;
+    --gray-700: #5D5D6D;
     --gray-900: #123952;
 
     --blue-500: #115D8C;
@@ -39,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, select, button {
-    font: 400 1rem 'Saira', sans-serif,
+    font: 400 1rem 'Saira', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
