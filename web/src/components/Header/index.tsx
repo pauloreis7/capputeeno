@@ -1,37 +1,23 @@
-import { FiSearch, FiShoppingBag } from 'react-icons/fi'
+import { Search } from './Search'
+import { CartIcon } from './CartIcon'
+import { Logo } from './Logo'
 
 import {
   Container,
   Content,
-  Logo,
   ActionSection,
-  Search,
-  CartIcon
 } from './styles'
 
 export function Header() {
   return (
     <Container>
       <Content>
-        <Logo>
-          capputeeno
-        </Logo>
+        <Logo />
 
         <ActionSection>
-          <Search>
-            <input 
-              placeholder='Looking for something specific?'
-            />
+          <Search />
 
-            <FiSearch size={'1.5rem'} />
-          </Search>
-
-          <CartIcon>
-            <FiShoppingBag size={'1.5rem'}  />
-
-
-            <span>2</span>
-          </CartIcon>
+          <CartIcon />
         </ActionSection>
       </Content>
     </Container>
