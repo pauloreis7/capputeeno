@@ -1,4 +1,9 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+interface NavLinkProps {
+  isActive: boolean
+}
+
 
 export const Container = styled.header`
   flex: 1;
@@ -40,13 +45,24 @@ export const HeaderNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
 
-  a {
+export const NavLink = styled.a<NavLinkProps>`
+  color: var(--gray-600);
+  line-height: 1.375rem;
+  font-size: 1.125rem;
+  transition: filter 0.3s;
+
+  &:hover {
     color: var(--gray-800);
-    font-weight: 600;
-    line-height: 1.375rem;
-    font-size: 1.125rem;
+  }
 
-    border-bottom: 4px solid var(--orange-200);
+  ${props => 
+    props.isActive && 
+    css`
+      color: var(--gray-800);
+      font-weight: 600;
+      border-bottom: 4px solid var(--orange-200);
+    `
   }
 `
