@@ -1,3 +1,13 @@
+import { Container, Content } from '../styles/home'
+
+import { HomeHeader } from '../components/HomeHeader'
+
 export default function Home() {
-  return <h1>Hello Wolrd!</h1>
+  return (
+    <Container>
+      <Content>
+        <HomeHeader />
+      </Content>
+    </Container>
+  )
 }
