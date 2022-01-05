@@ -1,14 +1,24 @@
 import { Container, ProductInfo } from "./styles";
 
-export function HomeProduct() {
+interface HomeProductProps {
+  poster: string
+  title: string
+  price: string
+}
+
+export function HomeProduct({ 
+  poster, 
+  title, 
+  price 
+}: HomeProductProps) {
   return (
     <Container>
-      <img src="https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-04.jpg" alt="img" />
+      <img src={poster} alt={title} />
 
       <ProductInfo>
-        <h4>Rustic ceramic mug</h4>
+        <h4>{title}</h4>
 
-        <strong>$ 40.00</strong>
+        <strong>$ {price}</strong>
       </ProductInfo>
     </Container>
   )
