@@ -1,15 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const Container = styled.section`
-  width: 100%;
-  margin-top: 2.25rem;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-`
-
-export const Product = styled.div`
+export const Container = styled.div`
   max-width: 16rem;
   height: 23.625rem;
 

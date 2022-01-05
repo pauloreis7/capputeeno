@@ -1,7 +1,7 @@
 import { Container, Content } from '../styles/home'
 
 import { HomeHeader } from '../components/HomeHeader'
-import { HomeProducts } from '../components/HomeProducts'
+import { HomeProductsList } from '../components/HomeProductsList'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Content>
         <HomeHeader />
 
-        <HomeProducts />
+        <HomeProductsList />
       </Content>
     </Container>
   )

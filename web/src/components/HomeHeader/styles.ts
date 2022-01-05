@@ -88,6 +88,7 @@ export const HeaderDropList = styled.div<HeaderDropListProps>`
   background: var(--white);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  z-index: 999;
 
   ${props => 
     !props.isActive && 
