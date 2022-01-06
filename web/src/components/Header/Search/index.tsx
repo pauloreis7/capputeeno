@@ -6,10 +6,10 @@ export function Search() {
   return (
     <Container>
       <input 
-        placeholder='Looking for something specific?'
+        placeholder='Looking for what?'
       />
 
-      <FiSearch size={'1.5rem'} />
+      <FiSearch />
     </Container>
   )
 }
