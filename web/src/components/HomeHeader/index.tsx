@@ -48,7 +48,7 @@ export function HomeHeader() {
 
       <button type='button' onClick={() => setActiveDropList(!activeDropList)}>
         <span>
-          Sort by
+          <strong>Sort by</strong>
 
           <FiChevronDown size={'1.5rem'}  />
         </span>

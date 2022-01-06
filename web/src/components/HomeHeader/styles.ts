@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import { device, size } from '../../styles/responsive'
+
 interface NavLinkProps {
   isActive: boolean
 }
@@ -15,12 +17,17 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: ${size.tablet}) { 
+    flex-direction: column;
+    align-items: start;
+  }
+
   > button {
     position: relative;
     width: 11rem;
 
     background: transparent;
-    line-height: 22px;
+    line-height: 1.375rem;
     color: var(--gray-600);
     border: none;
 
@@ -35,6 +42,16 @@ export const Container = styled.header`
       background: var(--gray-200);
       transition: filter 0.2s;
 
+      @media (max-width: ${size.tablet}) { 
+        justify-content: left;
+
+        margin-top: 1rem;
+      }
+
+      strong {
+        font-weight: 400;
+      }
+
       svg {
         margin-left: 0.75rem;
       }
@@ -48,7 +65,15 @@ export const Container = styled.header`
 
 export const HeaderNav = styled.nav`
   width: 100%;
-  max-width: 25.625rem;
+  max-width: 18rem;
+
+  @media ${device.tablet} { 
+    max-width: 22.5rem;
+  }
+
+  @media ${device.laptop} { 
+    max-width: 25.625rem;
+  }
 
   list-style: none;
   text-transform: uppercase;
@@ -60,9 +85,22 @@ export const HeaderNav = styled.nav`
 
 export const NavLink = styled.a<NavLinkProps>`
   color: var(--gray-600);
-  line-height: 1.375rem;
-  font-size: 1.125rem;
   transition: filter 0.3s;
+
+  @media ${device.mobileL} { 
+    line-height: 0.975rem;
+    font-size: 0.85rem;
+  }
+
+  @media ${device.tablet} { 
+    line-height: 0.875rem;
+    font-size: 1rem;
+  }
+
+  @media ${device.laptop} { 
+    line-height: 1.375rem;
+    font-size: 1.125rem;
+  }
 
   &:hover {
     color: var(--gray-800);
